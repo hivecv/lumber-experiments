@@ -1,0 +1,13 @@
+[Unit]
+Description=Lumber Service
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+WorkingDirectory=WORKDIR
+ExecStart=/bin/bash WORKDIR/start_app.sh PYTHONEXEC
+
+[Install]
+WantedBy=multi-user.target
